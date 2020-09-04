@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1>Estas son las bandas pertenecientes al genero <%= genero %> :  </h1>
+    <% if(generoBuscado.length===0){ %>
+        <p>No hay bandas pertenecientes a ese genero</p>
+    <% } else { %>  
+        <% for (let i=0; i<generoBuscado.length; i++){ %>
+            <li><a href="/bandas/id/<%= generoBuscado[i].id  %> "><%= generoBuscado[i].nombre %></a> </li> 
+        <% } %> 
+        <% } %> 
+</body>
+</html>

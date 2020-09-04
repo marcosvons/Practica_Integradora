@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+    <h1>La banda que buscaste:</h1>
+    <% if (bandaPorId.length===0){ %>
+        <p>No existe, proba con otro ID</p>
+    <% } else { %>  
+        <li><%= bandaPorId[0].nombre  %>, con <%= bandaPorId[0].integrantes %> integrantes, perteneciente al genero: <a href="/bandas/genero/<%= bandaPorId[0].genero %> "><%=bandaPorId[0].genero %></a>, sus mejores canciones son: <%= bandaPorId[0].topCanciones %>  </li> 
+        <li><img class="fotos" src="<%= bandaPorId[0].cover  %>" alt=""></li>
+        <li><a href="<%= bandaPorId[0].video  %> ">Video</a></li>
+    <% } %> 
+</body>
+</html>
